@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Hero } from '@/components/Hero/Hero'
+import { ClientField } from '@/features/laboratory/ClientField/ClientField'
 import { createTranslation } from '@/i18n/server'
 
 export const metadata: Metadata = {
@@ -13,6 +14,8 @@ export default async function Home() {
   return (
     <>
       <Hero title={t('HomePage.title')} ctaText={t('HomePage.cta')} ctaUrl="/projects" />
+      <br />
+      <ClientField />
     </>
   )
 }

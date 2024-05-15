@@ -1,7 +1,7 @@
 import Dexie, { Table } from 'dexie'
 import { IStory } from '../../features/story/type'
 
-const dbName = 'nftile'
+const dbName = 'nftale'
 
 interface IDexieDB extends Dexie {
   stories: Table<IStory>

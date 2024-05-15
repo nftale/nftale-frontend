@@ -1,6 +1,7 @@
 import { FC, PropsWithChildren } from 'react'
 import { Header as AntHeader } from 'antd/es/layout/layout'
 import Link from 'next/link'
+import { AuthButton } from '@/features/auth/AuthButton/AuthButton'
 import { createTranslation } from '@/i18n/server'
 import { Container } from '../Container/Container'
 import styles from './Header.module.scss'
@@ -22,6 +23,8 @@ export const Header: FC<PropsWithChildren> = async () => {
             </Link>
           </li>
         </ul>
+
+        <AuthButton />
       </Container>
     </AntHeader>
   )
