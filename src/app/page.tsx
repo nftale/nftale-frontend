@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Container } from '@/components/Container/Container'
+import { Hero } from '@/components/Hero/Hero'
+import { createTranslation } from '@/i18n/server'
 
 export const metadata: Metadata = {
   title: 'NFTale',
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  return <Container>HomePage</Container>
+  const { t } = await createTranslation()
+
+  return (
+    <>
+      <Hero title={t('HomePage.title')} ctaText={t('HomePage.cta')} ctaUrl="/projects" />
+    </>
+  )
 }
